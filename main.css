@@ -1,55 +1,32 @@
-.content {
-  position: relative;
-  top: 30%;
-  z-index: 2;
-  margin: 0 auto;
-  max-width: 720px;
-  text-align: center;
+.parallax-container {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-.video {
-  position: fixed;
-  top: 60%; left: 50%;
-  z-index: 1;
-  transform: translate(-50%, -50%);
-}
-
-h1{
-  color: rgb(0, 0, 0, 0.56);
-  font-size: 96px;
-  font-family: helvetica;
-  letter-spacing: 3px;
-  box-shadow: 0 0 30px #fff;
-}
-
-html, body, div, h1, p, a, video {
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  height: 100%;
-}
-
-h2 {
-  text-align: center;
-  font-family: sans-serif;
-}
-
-nav {
-  background-color: black;
-  padding: 8px;
-  color: white;
-}
-
-ul {
+.parallax {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
 }
 
-li {
-  list-style-type: none;
-  display: inline;
-  margin: 20px;ß
+.background-layer {
+  transform: translateZ(-1px) scale(2);
+  background-color: rgba(0,255,0,0.5);
+  text-align: center;
+}
+
+.foreground-layer {
+  transform: translateZ(0);
+  background-color: rgba(0, 255, 0, 0.5);
+}
+
+.parallax-all {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+  background-color: rgba(255, 0, 0, 0.5);
 }
