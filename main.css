@@ -1,32 +1,41 @@
-.parallax-container {
-  perspective: 1px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
+section.container.static {
+  padding: 40px 0;
 }
 
-.parallax {
-  position: absolute;
-  top:0;
-  right:0;
-  bottom:0;
-  left:0;
+section.container.parallax {
+  padding: 240px 0;
+  background-position: 0, 0;
+
+  /*height: 600px;*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: cover;*/
+  /*background-position: 50% 50%;
+  background-attachment: fixed;*/
 }
 
-.background-layer {
-  transform: translateZ(-1px) scale(2);
-  background-color: rgba(0,255,0,0.5);
+section.container.parallax.h1 {
+  line-height: 1;
+  font-size: 40px;
   text-align: center;
+  text-transform: uppercase;
+  /*line-height: 600px;*/
+  color: rgba(255,255,255,0.8);
+  font-family:sans-serif;
+  text-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-.foreground-layer {
-  transform: translateZ(0);
-  background-color: rgba(0, 255, 0, 0.5);
+section.container.parallax-1 {
+  background-image: url('./images/bg_1.jpeg')
 }
 
-.parallax-all {
-  position: relative;
-  height: 100vh;
-  transform-style: preserve-3d;
-  background-color: rgba(255, 0, 0, 0.5);
+section.container.parallax-2 {
+  background-image: url('./images/bg_2.jpeg');
+}
+
+section.container.parallax-3 {
+  background-image: url('./images/bg_3.jpeg');
+}
+
+section.container.parallax-4 {
+  background-image: url('./images/bg_4.jpeg');
 }
